@@ -13,7 +13,6 @@ class TodoBox extends Component {
 
     this.onSubmit = this.onSubmit.bind(this);
   }
-
   onSubmit(e){
     e.preventDefault();
     this.props.onSubmit(e);
@@ -28,9 +27,9 @@ class TodoBox extends Component {
     return (
       <div className="TodoBox">
           <form onSubmit = {this.onSubmit}>
-            <input type = "text" value = {this.state.todoText} onChange =
+            <input className = "TodoBox-Input" type = "text" value = {this.state.todoText} onChange =
               {(e) => this.setState({todoText: e.target.value})}/>
-            <input type = "submit" value = "agregar"/>
+            <input className = "TodoBox-Button" type = "submit" value = "agregar"/>
           </form>
       </div>
     );
